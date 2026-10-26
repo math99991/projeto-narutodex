@@ -5,7 +5,7 @@ function App() {
       <header className="flex items-center justify-between gap-4 border-b border-slate-200 bg-white px-4 py-4 md:px-8">
         <div className="flex items-center gap-3">
           <img 
-            src="/images/logo.png" 
+            src="./images/logo.png" 
             alt="Logo Naruto Dex" 
             className="h-12 w-12 rounded-lg object-cover bg-slate-200"
           />
@@ -31,7 +31,7 @@ function App() {
           </div>
           <div className="shrink-0 overflow-hidden rounded-lg">
             <img 
-              src="/images/hero.jpg" 
+              src="./images/hero.jpg" 
               alt="Banner Naruto" 
               className="h-28 w-32 object-cover md:h-40 md:w-80 lg:w-[28rem] rounded-lg bg-slate-200"
             />
@@ -55,7 +55,7 @@ function App() {
             
             {/* 1. Naruto */}
             <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/naruto.jpg" alt="Naruto Uzumaki" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/naruto.jpg" alt="Naruto Uzumaki" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Naruto Uzumaki</h3>
@@ -69,7 +69,7 @@ function App() {
 
             {/* 2. Sasuke */}
             <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/sasuke.jpg" alt="Sasuke Uchiha" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/sasuke.jpg" alt="Sasuke Uchiha" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Sasuke Uchiha</h3>
@@ -83,7 +83,7 @@ function App() {
 
             {/* 3. Sakura */}
             <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/sakura.jpg" alt="Sakura Haruno" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/sakura.jpg" alt="Sakura Haruno" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Sakura Haruno</h3>
@@ -97,7 +97,7 @@ function App() {
 
             {/* 4. Kakashi */}
             <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/kakashi.jpg" alt="Kakashi Hatake" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/kakashi.jpg" alt="Kakashi Hatake" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Kakashi Hatake</h3>
@@ -111,7 +111,7 @@ function App() {
 
             {/* 5. Hinata (Tablet+) */}
             <article className="hidden md:flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/hinata.jpg" alt="Hinata Hyuga" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/hinata.jpg" alt="Hinata Hyuga" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Hinata Hyuga</h3>
@@ -125,7 +125,7 @@ function App() {
 
             {/* 6. Shikamaru (Tablet+) */}
             <article className="hidden md:flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/shikamaru.jpg" alt="Shikamaru Nara" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/shikamaru.jpg" alt="Shikamaru Nara" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Shikamaru Nara</h3>
@@ -139,7 +139,7 @@ function App() {
 
             {/* 7. Itachi (Desktop+) */}
             <article className="hidden lg:flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/itachi.jpg" alt="Itachi Uchiha" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/itachi.jpg" alt="Itachi Uchiha" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Itachi Uchiha</h3>
@@ -153,7 +153,7 @@ function App() {
 
             {/* 8. Gaara (Desktop+) */}
             <article className="hidden lg:flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/gaara.jpg" alt="Gaara" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/gaara.jpg" alt="Gaara" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Gaara</h3>
@@ -167,7 +167,7 @@ function App() {
 
             {/* 9. Tsunade (Desktop+) */}
             <article className="hidden lg:flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/tsunade.jpg" alt="Tsunade" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/tsunade.jpg" alt="Tsunade" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Tsunade</h3>
@@ -181,7 +181,7 @@ function App() {
 
             {/* 10. Jiraiya (Desktop+) */}
             <article className="hidden lg:flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/jiraiya.jpg" alt="Jiraiya" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/jiraiya.jpg" alt="Jiraiya" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Jiraiya</h3>
@@ -195,7 +195,7 @@ function App() {
 
             {/* 11. Rock Lee (Desktop+) */}
             <article className="hidden lg:flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/rocklee.jpg" alt="Rock Lee" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/rocklee.jpg" alt="Rock Lee" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Rock Lee</h3>
@@ -209,7 +209,7 @@ function App() {
 
             {/* 12. Minato (Desktop+) */}
             <article className="hidden lg:flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/minato.jpg" alt="Minato Namikaze" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/minato.jpg" alt="Minato Namikaze" className="h-24 w-28 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="text-lg font-bold text-slate-900">Minato Namikaze</h3>
@@ -236,7 +236,7 @@ function App() {
           <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
             
             <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/konoha.jpg" alt="Konoha" className="h-16 w-16 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/konoha.jpg" alt="Konoha" className="h-16 w-16 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div>
                 <h3 className="text-lg font-bold text-slate-900">Vila da Folha (Konoha)</h3>
                 <p className="text-sm text-slate-600">País da vila: País do Fogo</p>
@@ -245,7 +245,7 @@ function App() {
             </article>
 
             <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/suna.jpg" alt="Suna" className="h-16 w-16 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/suna.jpg" alt="Suna" className="h-16 w-16 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div>
                 <h3 className="text-lg font-bold text-slate-900">Vila da Areia (Suna)</h3>
                 <p className="text-sm text-slate-600">País da vila: País do Vento</p>
@@ -254,7 +254,7 @@ function App() {
             </article>
 
             <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/kiri.jpg" alt="Kiri" className="h-16 w-16 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/kiri.jpg" alt="Kiri" className="h-16 w-16 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div>
                 <h3 className="text-lg font-bold text-slate-900">Vila da Névoa (Kiri)</h3>
                 <p className="text-sm text-slate-600">País da vila: País da Água</p>
@@ -263,7 +263,7 @@ function App() {
             </article>
 
             <article className="hidden md:flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <img src="/images/kumo.jpg" alt="Kumo" className="h-16 w-16 shrink-0 rounded-lg object-cover bg-slate-200" />
+              <img src="./images/kumo.jpg" alt="Kumo" className="h-16 w-16 shrink-0 rounded-lg object-cover bg-slate-200" />
               <div>
                 <h3 className="text-lg font-bold text-slate-900">Vila da Nuvem (Kumo)</h3>
                 <p className="text-sm text-slate-600">País da vila: País do Raio</p>
