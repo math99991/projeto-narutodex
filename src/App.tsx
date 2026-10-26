@@ -66,9 +66,200 @@ function App() {
             />
           </div>
         </section>
-      </main>
+        {/* LISTAGEM DE PERSONAGENS */}
+        <section id="personagens">
+          <h2 className="text-2xl font-bold">
+            PERSONAGENS
+          </h2>
 
-      {/* RODAPÉ PROVISÓRIO */}
+          <p className="text-sm text-slate-600">
+            Explore a lista dos principais shinobis de Naruto
+          </p>
+
+          {/* PESQUISA E FILTROS */}
+          <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-center">
+            <input
+              type="search"
+              placeholder="Buscar personagem..."
+              className="w-full flex-1 rounded-lg border border-slate-300 bg-white px-4 py-2"
+            />
+
+            <div className="flex gap-3">
+              <button className="rounded-lg border border-slate-300 bg-white px-6 py-2 font-semibold">
+                TODOS
+              </button>
+
+              <button className="rounded-lg border border-slate-300 bg-white px-6 py-2 font-semibold">
+                FAVORITOS ♡
+              </button>
+            </div>
+          </div>
+
+          {/* CARDS DOS PERSONAGENS */}
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+
+            {/* NARUTO */}
+            <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <img
+                src="/images/naruto.jpg"
+                alt="Naruto Uzumaki"
+                className="h-24 w-28 shrink-0 rounded-lg bg-slate-200 object-cover"
+              />
+
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg font-bold">Naruto Uzumaki</h3>
+                  <button aria-label="Favoritar Naruto" className="text-xl text-orange-500">♡</button>
+                </div>
+                <p className="mt-1 text-sm text-slate-600">Vila: Konoha</p>
+                <p className="text-sm text-slate-600">Clã: Uzumaki</p>
+                <p className="text-sm text-slate-600">Habilidade: Rasengan</p>
+              </div>
+            </article>
+
+            {/* SASUKE */}
+            <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <img
+                src="/images/sasuke.jpg"
+                alt="Sasuke Uchiha"
+                className="h-24 w-28 shrink-0 rounded-lg bg-slate-200 object-cover"
+              />
+
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg font-bold">Sasuke Uchiha</h3>
+                  <button aria-label="Favoritar Sasuke" className="text-xl text-orange-500">♡</button>
+                </div>
+                <p className="mt-1 text-sm text-slate-600">Vila: Konoha</p>
+                <p className="text-sm text-slate-600">Clã: Uchiha</p>
+                <p className="text-sm text-slate-600">Habilidade: Chidori</p>
+              </div>
+            </article>
+
+            {/* SAKURA */}
+            <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <img
+                src="/images/sakura.jpg"
+                alt="Sakura Haruno"
+                className="h-24 w-28 shrink-0 rounded-lg bg-slate-200 object-cover"
+              />
+
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg font-bold">Sakura Haruno</h3>
+                  <button aria-label="Favoritar Sakura" className="text-xl text-orange-500">♡</button>
+                </div>
+                <p className="mt-1 text-sm text-slate-600">Vila: Konoha</p>
+                <p className="text-sm text-slate-600">Clã: Haruno</p>
+                <p className="text-sm text-slate-600">Habilidade: Força sobre-humana</p>
+              </div>
+            </article>
+
+            {/* KAKASHI */}
+            <article className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <img
+                src="/images/kakashi.jpg"
+                alt="Kakashi Hatake"
+                className="h-24 w-28 shrink-0 rounded-lg bg-slate-200 object-cover"
+              />
+
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg font-bold">Kakashi Hatake</h3>
+                  <button aria-label="Favoritar Kakashi" className="text-xl text-orange-500">♡</button>
+                </div>
+                <p className="mt-1 text-sm text-slate-600">Vila: Konoha</p>
+                <p className="text-sm text-slate-600">Clã: Hatake</p>
+                <p className="text-sm text-slate-600">Habilidade: Sharingan</p>
+              </div>
+            </article>
+
+            {/* HINATA */}
+            <article className="hidden items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm md:flex">
+              <img
+                src="/images/hinata.jpg"
+                alt="Hinata Hyuga"
+                className="h-24 w-28 shrink-0 rounded-lg bg-slate-200 object-cover"
+              />
+
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg font-bold">Hinata Hyuga</h3>
+                  <button aria-label="Favoritar Hinata" className="text-xl text-orange-500">♡</button>
+                </div>
+                <p className="mt-1 text-sm text-slate-600">Vila: Konoha</p>
+                <p className="text-sm text-slate-600">Clã: Hyuga</p>
+                <p className="text-sm text-slate-600">Habilidade: Byakugan</p>
+              </div>
+            </article>
+
+            {/* SHIKAMARU */}
+            <article className="hidden items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm md:flex">
+              <img
+                src="/images/shikamaru.jpg"
+                alt="Shikamaru Nara"
+                className="h-24 w-28 shrink-0 rounded-lg bg-slate-200 object-cover"
+              />
+
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg font-bold">Shikamaru Nara</h3>
+                  <button aria-label="Favoritar Shikamaru" className="text-xl text-orange-500">♡</button>
+                </div>
+                <p className="mt-1 text-sm text-slate-600">Vila: Konoha</p>
+                <p className="text-sm text-slate-600">Clã: Nara</p>
+                <p className="text-sm text-slate-600">Habilidade: Manipulação de sombras</p>
+              </div>
+            </article>
+
+            {/* ITACHI */}
+            <article className="hidden items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm lg:flex">
+              <img
+                src="/images/itachi.jpg"
+                alt="Itachi Uchiha"
+                className="h-24 w-28 shrink-0 rounded-lg bg-slate-200 object-cover"
+              />
+
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg font-bold">Itachi Uchiha</h3>
+                  <button aria-label="Favoritar Itachi" className="text-xl text-orange-500">♡</button>
+                </div>
+                <p className="mt-1 text-sm text-slate-600">Vila: Konoha</p>
+                <p className="text-sm text-slate-600">Clã: Uchiha</p>
+                <p className="text-sm text-slate-600">Habilidade: Tsukuyomi</p>
+              </div>
+            </article>
+
+            {/* GAARA */}
+            <article className="hidden items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm lg:flex">
+              <img
+                src="/images/gaara.jpg"
+                alt="Gaara"
+                className="h-24 w-28 shrink-0 rounded-lg bg-slate-200 object-cover"
+              />
+
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg font-bold">Gaara</h3>
+                  <button aria-label="Favoritar Gaara" className="text-xl text-orange-500">♡</button>
+                </div>
+                <p className="mt-1 text-sm text-slate-600">Vila: Suna</p>
+                <p className="text-sm text-slate-600">Clã: Sabaku</p>
+                <p className="text-sm text-slate-600">Habilidade: Controle da areia</p>
+              </div>
+            </article>
+
+          </div>
+
+          <div className="mt-6 text-center">
+            <button className="rounded-lg border border-slate-300 bg-white px-6 py-2">
+              Ver todos os principais personagens →
+            </button>
+          </div>
+        </section>
+      </main>
+      {/* RODAPÉ */}
       <footer className="mt-10 border-t border-slate-200 bg-white px-4 py-6 text-sm text-slate-600 md:px-8">
         <p>NARUTODEX - PROJETO TCD</p>
       </footer>
