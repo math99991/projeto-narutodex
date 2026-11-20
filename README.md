@@ -4,5 +4,5 @@ Projeto acadêmico TCD de site com catálogo de personagens e vilas ninja do des
 ## Autor
 Matheus Fernandes
 
-## Objetivo Fase 3
-Divisão da página em componentes React reutilizáveis, com dados organizados em vetores de objetos tipados com TypeScript, renderização de listas com `map` e `key`, props tipadas e interatividade com `useState`.
+## Objetivo Fase 4
+Carregamento dos personagens a partir de um arquivo JSON utilizando `fetch` e `useEffect`, com estados de carregamento e tratamento de erros, mantendo a estrutura de componentes e a interatividade do projeto.
