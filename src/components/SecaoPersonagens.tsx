@@ -1,6 +1,8 @@
 import type { Filtro, Personagem } from "../data/tipos";
 import BarraFiltros from "./BarraFiltros";
 import CardPersonagem from "./CardPersonagem";
+import EstadoCarregando from "./EstadoCarregando";
+import EstadoErro from "./EstadoErro";
 import TituloSecao from "./TituloSecao";
 
 type SecaoPersonagensProps = {
@@ -9,6 +11,9 @@ type SecaoPersonagensProps = {
   busca: string;
   filtro: Filtro;
   mostrarTodos: boolean;
+  carregando: boolean;
+  erro: string | null;
+  aoTentarNovamente: () => void;
   aoFavoritar: (id: number) => void;
   aoMudarBusca: (texto: string) => void;
   aoMudarFiltro: (filtro: Filtro) => void;
@@ -36,6 +41,9 @@ function SecaoPersonagens({
   busca,
   filtro,
   mostrarTodos,
+  carregando,
+  erro,
+  aoTentarNovamente,
   aoFavoritar,
   aoMudarBusca,
   aoMudarFiltro,
@@ -65,7 +73,11 @@ function SecaoPersonagens({
         aoMudarFiltro={aoMudarFiltro}
       />
 
-      {filtrados.length > 0 ? (
+      {carregando ? (
+        <EstadoCarregando />
+      ) : erro ? (
+        <EstadoErro mensagem={erro} aoTentarNovamente={aoTentarNovamente} />
+      ) : filtrados.length > 0 ? (
         <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {filtrados.map((personagem, indice) => (
             <div key={personagem.id} className={classeDoCard(indice, mostrarTudo)}>
@@ -85,7 +97,7 @@ function SecaoPersonagens({
         </p>
       )}
 
-      {!filtrando && (
+      {!carregando && !erro && !filtrando && (
         <div className="mt-6 text-center lg:hidden">
           <button
             onClick={aoAlternarMostrarTodos}

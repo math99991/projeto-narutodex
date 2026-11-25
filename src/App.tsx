@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cabecalho from "./components/Cabecalho";
 import Hero from "./components/Hero";
 import Rodape from "./components/Rodape";
 import SecaoPersonagens from "./components/SecaoPersonagens";
 import SecaoVilas from "./components/SecaoVilas";
-import { personagens } from "./data/personagens";
-import type { Filtro } from "./data/tipos";
+import { buscarPersonagens } from "./data/buscarPersonagens";
+import type { Filtro, Personagem } from "./data/tipos";
 import { vilas } from "./data/vilas";
 
 function App() {
+  // Dados externos: a lista chega por fetch, então começa vazia e "carregando"
+  const [personagens, setPersonagens] = useState<Personagem[]>([]);
+  const [carregando, setCarregando] = useState(true);
+  const [erro, setErro] = useState<string | null>(null);
+  const [tentativa, setTentativa] = useState(0);
+
   const [escuro, setEscuro] = useState(false);
   const [menuAberto, setMenuAberto] = useState(false);
   const [favoritos, setFavoritos] = useState<number[]>([]);
@@ -16,6 +22,31 @@ function App() {
   const [filtro, setFiltro] = useState<Filtro>("todos");
   const [mostrarTodos, setMostrarTodos] = useState(false);
   const [mostrarTodasVilas, setMostrarTodasVilas] = useState(false);
+
+  useEffect(() => {
+    let ativo = true; // evita atualizar o estado se o efeito for refeito ou o componente sair da tela
+
+    buscarPersonagens()
+      .then((dados) => {
+        if (ativo) setPersonagens(dados);
+      })
+      .catch(() => {
+        if (ativo) setErro("Não foi possível carregar os personagens. Verifique sua conexão e tente novamente.");
+      })
+      .finally(() => {
+        if (ativo) setCarregando(false);
+      });
+
+    return () => {
+      ativo = false;
+    };
+  }, [tentativa]); // mudar "tentativa" refaz a requisição
+
+  function tentarNovamente() {
+    setErro(null);
+    setCarregando(true);
+    setTentativa((atual) => atual + 1);
+  }
 
   function alternarFavorito(id: number) {
     setFavoritos((atual) =>
@@ -48,6 +79,9 @@ function App() {
             busca={busca}
             filtro={filtro}
             mostrarTodos={mostrarTodos}
+            carregando={carregando}
+            erro={erro}
+            aoTentarNovamente={tentarNovamente}
             aoFavoritar={alternarFavorito}
             aoMudarBusca={setBusca}
             aoMudarFiltro={setFiltro}
